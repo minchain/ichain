@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+# Optional: redirect /index.html to /
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or site.name }}</title>
+  <meta name="description" content="{{ description or site.tagline }}">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  {% include "partials/header.njk" %}
+
+  <main class="container">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+</body>
+</html>

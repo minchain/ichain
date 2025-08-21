@@ -1,0 +1,13 @@
+{
+  "name": "company-intro-11ty-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple, Markdown-first Eleventy site for a company intro, ready for Netlify.",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
