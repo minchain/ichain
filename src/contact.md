@@ -8,6 +8,7 @@ description: Get in touch.
 
 <div class="callout">
   <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+  
   Phone: {{ site.phone }}</p>
 </div>
 
