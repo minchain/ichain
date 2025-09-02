@@ -3,12 +3,12 @@
 ---
 layout: layouts/base.njk
 title: Home
-description: Welcome to {{ site.name }} — {{ site.tagline }}
+description: Welcome to iChain World — Web3 infrastructure & applications
 ---
 
 <section class="hero">
-  <h1>{{ site.name }}</h1>
-  <p>{{ site.tagline }}</p>
+  <h1>Welcome to iChain World</h1>
+  <p>A Web3 company providing L1 & L2 infrastructure and Web3 applications</p>
 </section>
 
 <section>

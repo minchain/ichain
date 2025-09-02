@@ -3,9 +3,36 @@
 body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
 a { color: var(--brand); text-decoration: none; }
 .container { max-width: 900px; margin: 0 auto; padding: 1.25rem; }
-.site-header { background: var(--brand); color: #fff; }
-.site-header a { color:#fff; }
-.site-header .flex { display:flex; align-items:center; justify-content: space-between; }
+.site-header {
+  background: var(--brand);
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.site-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* brand (logo + text) */
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.site-header .brand img {
+  height: 40px;
+  margin-right: 8px;
+}
+
 .brand { font-weight: 700; font-size: 1.1rem; letter-spacing: .2px; }
 nav a { margin-left: 1rem; opacity:.95; }
 nav a:hover { text-decoration: underline; }
