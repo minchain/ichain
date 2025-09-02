@@ -12,11 +12,12 @@ Use either YouTube (recommended) or self-hosted MP4s.
 
 Embed a YouTube video by ID with the shortcode:
 
+
 ```
-{% raw %}{% youtube "dQw4w9WgXcQ" "Our Product Demo" %}{% endraw %}
+{% raw %}{% youtube "dQw4w9WgXcQ", "Our Product Demo" %}{% endraw %}
 ```
 
-{% youtube "dQw4w9WgXcQ" "Our Product Demo" %}
+{% youtube "dQw4w9WgXcQ", "Our Product Demo" %}
 
 ## Self‑hosted MP4 (simple)
 

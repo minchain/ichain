@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <meta name="description" content="Get in touch.">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="container flex">
+    <a class="brand" href="/">Your Company</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/videos/">Videos</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container">
+    <h1>Contact</h1>
+<div class="callout">
+  <p>Email: <a href="mailto:contact@yourcompany.com">contact@yourcompany.com</a><br>
+<p>Phone: (123) 456-7890</p></p>
+</div>
+<form name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact">
+  <p><label>Your Name<br><input type="text" name="name" required></label></p>
+  <p><label>Email<br><input type="email" name="email" required></label></p>
+  <p><label>Message<br><textarea name="message" rows="6" required></textarea></label></p>
+  <p><button type="submit">Send</button></p>
+</form>
+<blockquote>
+<p>This form works on Netlify with zero code changes.</p>
+</blockquote>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Your Company</p>
+  </div>
+</footer>
+
+</body>
+</html>
