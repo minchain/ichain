@@ -1,46 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services</title>
-  <meta name="description" content="What we offer.">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-  <header class="site-header">
-  <div class="container flex">
-    <a class="brand" href="/">
-      <img src="/assets/images/ichain_logo.png" alt="iChain Logo" style="height:40px; vertical-align: middle;" />
-      <span style="margin-left: 8px; font-weight: bold;">iChain World</span>
-    </a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/services/">Services</a>
-      <a href="/videos/">Videos</a>
-      <a href="/contact/">Contact</a>
-    </nav>
-  </div>
-</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services</title>
+    <meta name="description" content="What we offer." />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- 🔹 Intro Video Overlay -->
+    <div id="intro-video-container">
+      <video id="intro-video" autoplay muted playsinline>
+        <source src="/assets/videos/intro.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <button id="skip-intro">Skip Intro</button>
+    </div>
+    <!-- 🔹 End Intro Video Overlay -->
 
+    <header class="site-header">
+      <div class="container flex">
+        <a class="brand" href="/">
+          <img
+            src="/assets/images/ichain_logo.png"
+            alt="iChain Logo"
+            style="height: 40px; vertical-align: middle"
+          />
+          <span style="margin-left: 8px; font-weight: bold">iChain World</span>
+        </a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/services/">Services</a>
+          <a href="/videos/">Videos</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
 
+    <main class="container">
+      <h1>Services</h1>
+      <ul>
+        <li><strong>Consulting</strong> — get a plan in plain language.</li>
+        <li><strong>Implementation</strong> — we help you build it right.</li>
+        <li><strong>Support</strong> — we stay with you after launch.</li>
+      </ul>
+    </main>
 
-  <main class="container">
-    <h1>Services</h1>
-<ul>
-<li><strong>Consulting</strong> — get a plan in plain language.</li>
-<li><strong>Implementation</strong> — we help you build it right.</li>
-<li><strong>Support</strong> — we stay with you after launch.</li>
-</ul>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 Your Company</p>
+      </div>
+    </footer>
 
-  </main>
+    <!-- 🔹 Script to hide intro after end/skip -->
+    <script>
+      const introVideo = document.getElementById('intro-video');
+      const introContainer = document.getElementById('intro-video-container');
+      const skipBtn = document.getElementById('skip-intro');
 
-  <footer class="site-footer">
-  <div class="container">
-    <p>© 2025 Your Company</p>
-  </div>
-</footer>
+      introVideo.onended = () => {
+        introContainer.style.display = 'none';
+      };
 
-</body>
+      skipBtn.onclick = () => {
+        introVideo.pause();
+        introContainer.style.display = 'none';
+      };
+    </script>
+  </body>
 </html>

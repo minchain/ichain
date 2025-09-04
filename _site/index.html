@@ -1,70 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home</title>
-  <meta name="description" content="Welcome to iChain World — Web3 infrastructure &amp; applications">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-  <header class="site-header">
-  <div class="container flex">
-    <a class="brand" href="/">
-      <img src="/assets/images/ichain_logo.png" alt="iChain Logo" style="height:40px; vertical-align: middle;" />
-      <span style="margin-left: 8px; font-weight: bold;">iChain World</span>
-    </a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/services/">Services</a>
-      <a href="/videos/">Videos</a>
-      <a href="/contact/">Contact</a>
-    </nav>
-  </div>
-</header>
-
-
-
-  <main class="container">
-    <section class="hero">
-  <h1>Welcome to iChain World</h1>
-  <p>A Web3 company providing L1 & L2 infrastructure and Web3 applications</p>
-</section>
-<section>
-  <h2>What We Do</h2>
-  <p>We provide clear, practical solutions to help teams ship faster and grow smarter.</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Service One</h3>
-      <p>Short benefit-focused sentence about a key service.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <meta
+      name="description"
+      content="Welcome to iChain World — Web3 infrastructure &amp; applications"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- 🔹 Intro Video Overlay -->
+    <div id="intro-video-container">
+      <video id="intro-video" autoplay muted playsinline>
+        <source src="/assets/videos/intro.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <button id="skip-intro">Skip Intro</button>
     </div>
-    <div class="card">
-      <h3>Service Two</h3>
-      <p>Short benefit-focused sentence about a second service.</p>
-    </div>
-    <div class="card">
-      <h3>Service Three</h3>
-      <p>Short benefit-focused sentence about a third service.</p>
-    </div>
-  </div>
-</section>
-<section>
-  <h2>Why Choose Us</h2>
-  <ul class="checks">
-    <li>Fast turnaround and clear communication</li>
-    <li>Reliable results backed by experience</li>
-    <li>Simple pricing — no surprises</li>
-  </ul>
-</section>
+    <!-- 🔹 End Intro Video Overlay -->
 
-  </main>
+    <header class="site-header">
+      <div class="container flex">
+        <a class="brand" href="/">
+          <img
+            src="/assets/images/ichain_logo.png"
+            alt="iChain Logo"
+            style="height: 40px; vertical-align: middle"
+          />
+          <span style="margin-left: 8px; font-weight: bold">iChain World</span>
+        </a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/services/">Services</a>
+          <a href="/videos/">Videos</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-  <footer class="site-footer">
-  <div class="container">
-    <p>© 2025 Your Company</p>
-  </div>
-</footer>
+    <main class="container">
+      <section class="hero">
+        <h1>Welcome to iChain World</h1>
+        <p>
+          A Web3 company providing L1 & L2 infrastructure and Web3 applications
+        </p>
+      </section>
+      <section>
+        <h2>What We Do</h2>
+        <p>
+          We provide clear, practical solutions to help teams ship faster and
+          grow smarter.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Service One</h3>
+            <p>Short benefit-focused sentence about a key service.</p>
+          </div>
+          <div class="card">
+            <h3>Service Two</h3>
+            <p>Short benefit-focused sentence about a second service.</p>
+          </div>
+          <div class="card">
+            <h3>Service Three</h3>
+            <p>Short benefit-focused sentence about a third service.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Why Choose Us</h2>
+        <ul class="checks">
+          <li>Fast turnaround and clear communication</li>
+          <li>Reliable results backed by experience</li>
+          <li>Simple pricing — no surprises</li>
+        </ul>
+      </section>
+    </main>
 
-</body>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 Your Company</p>
+      </div>
+    </footer>
+
+    <!-- 🔹 Script to hide intro after end/skip -->
+    <script>
+      const introVideo = document.getElementById('intro-video');
+      const introContainer = document.getElementById('intro-video-container');
+      const skipBtn = document.getElementById('skip-intro');
+
+      introVideo.onended = () => {
+        introContainer.style.display = 'none';
+      };
+
+      skipBtn.onclick = () => {
+        introVideo.pause();
+        introContainer.style.display = 'none';
+      };
+    </script>
+  </body>
 </html>

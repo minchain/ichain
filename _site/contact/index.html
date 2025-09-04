@@ -8,6 +8,16 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+  <!-- 🔹 Intro Video Overlay -->
+  <div id="intro-video-container">
+    <video id="intro-video" autoplay muted playsinline>
+      <source src="/assets/videos/intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button id="skip-intro">Skip Intro</button>
+  </div>
+  <!-- 🔹 End Intro Video Overlay -->
+
   <header class="site-header">
   <div class="container flex">
     <a class="brand" href="/">
@@ -51,5 +61,21 @@
   </div>
 </footer>
 
+
+  <!-- 🔹 Script to hide intro after end/skip -->
+  <script>
+    const introVideo = document.getElementById("intro-video");
+    const introContainer = document.getElementById("intro-video-container");
+    const skipBtn = document.getElementById("skip-intro");
+
+    introVideo.onended = () => {
+      introContainer.style.display = "none";
+    };
+
+    skipBtn.onclick = () => {
+      introVideo.pause();
+      introContainer.style.display = "none";
+    };
+  </script>
 </body>
 </html>

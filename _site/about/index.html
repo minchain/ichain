@@ -1,45 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About</title>
-  <meta name="description" content="Learn about our mission and team.">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-  <header class="site-header">
-  <div class="container flex">
-    <a class="brand" href="/">
-      <img src="/assets/images/ichain_logo.png" alt="iChain Logo" style="height:40px; vertical-align: middle;" />
-      <span style="margin-left: 8px; font-weight: bold;">iChain World</span>
-    </a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/services/">Services</a>
-      <a href="/videos/">Videos</a>
-      <a href="/contact/">Contact</a>
-    </nav>
-  </div>
-</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us</title>
+    <meta
+      name="description"
+      content="Learn more about iChain — a Web3 company building infrastructure, applications, and cryptographic innovations."
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- 🔹 Intro Video Overlay -->
+    <div id="intro-video-container">
+      <video id="intro-video" autoplay muted playsinline>
+        <source src="/assets/videos/intro.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <button id="skip-intro">Skip Intro</button>
+    </div>
+    <!-- 🔹 End Intro Video Overlay -->
 
+    <header class="site-header">
+      <div class="container flex">
+        <a class="brand" href="/">
+          <img
+            src="/assets/images/ichain_logo.png"
+            alt="iChain Logo"
+            style="height: 40px; vertical-align: middle"
+          />
+          <span style="margin-left: 8px; font-weight: bold">iChain World</span>
+        </a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/services/">Services</a>
+          <a href="/videos/">Videos</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
 
+    <main class="container">
+      <h1>About iChain</h1>
+      <p>
+        At <strong>iChain</strong>, we are committed to building the next
+        generation of
+        <strong>Web3 infrastructure and applications</strong>.<br />
+        Our mission is to make blockchain technology accessible, scalable, and
+        secure for businesses and users worldwide.
+      </p>
+      <h2>What We Do</h2>
+      <p>
+        We specialize in core areas of Web3 and blockchain innovation,
+        including:
+      </p>
+      <ul>
+        <li>
+          <strong>Layer 1 &amp; Layer 2 Infrastructure</strong> – building
+          scalable blockchain foundations that support millions of users.
+        </li>
+        <li>
+          <strong>Smart Contracts</strong> – secure, efficient, and customizable
+          solutions for decentralized ecosystems.
+        </li>
+        <li>
+          <strong>Zero-Knowledge Proofs (ZKP)</strong> – advanced cryptography
+          for privacy-preserving and trustless applications.
+        </li>
+        <li>
+          <strong>Web3 Applications</strong> – decentralized apps (dApps)
+          designed for real-world adoption.
+        </li>
+        <li>
+          <strong>Cryptocurrency Solutions</strong> – token design, wallet
+          integration, and payment infrastructure.
+        </li>
+      </ul>
+      <h2>Our Vision</h2>
+      <p>
+        We believe Web3 will redefine the internet by enabling
+        <strong>decentralization, transparency, and user empowerment</strong
+        >.<br />
+        At iChain, we are building the infrastructure and tools that will power
+        this new digital economy.
+      </p>
+      <h2>Why Choose Us</h2>
+      <ul>
+        <li>
+          Strong expertise in
+          <strong>blockchain engineering &amp; cryptography</strong>
+        </li>
+        <li>
+          Proven track record of developing
+          <strong>scalable and secure Web3 systems</strong>
+        </li>
+        <li>
+          Commitment to
+          <strong>innovation, collaboration, and open technology</strong>
+        </li>
+      </ul>
+      <hr />
+      <p>Together, we’re shaping the future of the decentralized world. 🚀</p>
+    </main>
 
-  <main class="container">
-    <h1>About Us</h1>
-<p>We’re a small team focused on results. Our mission is to deliver quality and value without the fluff.</p>
-<blockquote>
-<p><strong>Our promise:</strong> simple, effective solutions and friendly support.</p>
-</blockquote>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 Your Company</p>
+      </div>
+    </footer>
 
-  </main>
+    <!-- 🔹 Script to hide intro after end/skip -->
+    <script>
+      const introVideo = document.getElementById('intro-video');
+      const introContainer = document.getElementById('intro-video-container');
+      const skipBtn = document.getElementById('skip-intro');
 
-  <footer class="site-footer">
-  <div class="container">
-    <p>© 2025 Your Company</p>
-  </div>
-</footer>
+      introVideo.onended = () => {
+        introContainer.style.display = 'none';
+      };
 
-</body>
+      skipBtn.onclick = () => {
+        introVideo.pause();
+        introContainer.style.display = 'none';
+      };
+    </script>
+  </body>
 </html>

@@ -1,61 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Videos</title>
-  <meta name="description" content="Short demos and explainers.">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-  <header class="site-header">
-  <div class="container flex">
-    <a class="brand" href="/">
-      <img src="/assets/images/ichain_logo.png" alt="iChain Logo" style="height:40px; vertical-align: middle;" />
-      <span style="margin-left: 8px; font-weight: bold;">iChain World</span>
-    </a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/services/">Services</a>
-      <a href="/videos/">Videos</a>
-      <a href="/contact/">Contact</a>
-    </nav>
-  </div>
-</header>
-
-
-
-  <main class="container">
-    <h1>Videos</h1>
-<p>Use either YouTube (recommended) or self-hosted MP4s.</p>
-<h2>YouTube/Vimeo (recommended)</h2>
-<p>Embed a YouTube video by ID with the shortcode:</p>
-<pre><code>{% youtube &quot;dQw4w9WgXcQ&quot;, &quot;Our Product Demo&quot; %}
-</code></pre>
-<div class="video-container">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Our Product Demo" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen loading="lazy"></iframe>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Videos</title>
+    <meta name="description" content="Short demos and explainers." />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- 🔹 Intro Video Overlay -->
+    <div id="intro-video-container">
+      <video id="intro-video" autoplay muted playsinline>
+        <source src="/assets/videos/intro.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <button id="skip-intro">Skip Intro</button>
     </div>
-<h2>Self‑hosted MP4 (simple)</h2>
-<p>Put your video file at <code>src/assets/your-video.mp4</code>, then embed:</p>
-<pre><code class="language-html">&lt;video controls preload=&quot;metadata&quot; style=&quot;width:100%; border-radius: 1rem;&quot;&gt;
+    <!-- 🔹 End Intro Video Overlay -->
+
+    <header class="site-header">
+      <div class="container flex">
+        <a class="brand" href="/">
+          <img
+            src="/assets/images/ichain_logo.png"
+            alt="iChain Logo"
+            style="height: 40px; vertical-align: middle"
+          />
+          <span style="margin-left: 8px; font-weight: bold">iChain World</span>
+        </a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/services/">Services</a>
+          <a href="/videos/">Videos</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Videos</h1>
+      <p>Use either YouTube (recommended) or self-hosted MP4s.</p>
+      <h2>YouTube/Vimeo (recommended)</h2>
+      <p>Embed a YouTube video by ID with the shortcode:</p>
+      <pre><code>{% youtube &quot;dQw4w9WgXcQ&quot;, &quot;Our Product Demo&quot; %}
+</code></pre>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Our Product Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <h2>Self‑hosted MP4 (simple)</h2>
+      <p>
+        Put your video file at <code>src/assets/your-video.mp4</code>, then
+        embed:
+      </p>
+      <pre><code class="language-html">&lt;video controls preload=&quot;metadata&quot; style=&quot;width:100%; border-radius: 1rem;&quot;&gt;
   &lt;source src=&quot;/assets/your-video.mp4&quot; type=&quot;video/mp4&quot;&gt;
   Sorry, your browser doesn't support embedded videos.
 &lt;/video&gt;
 </code></pre>
-<blockquote>
-<p>Tip: External hosting (YouTube/Vimeo) is best for large files to save bandwidth.</p>
-</blockquote>
+      <blockquote>
+        <p>
+          Tip: External hosting (YouTube/Vimeo) is best for large files to save
+          bandwidth.
+        </p>
+      </blockquote>
+    </main>
 
-  </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 Your Company</p>
+      </div>
+    </footer>
 
-  <footer class="site-footer">
-  <div class="container">
-    <p>© 2025 Your Company</p>
-  </div>
-</footer>
+    <!-- 🔹 Script to hide intro after end/skip -->
+    <script>
+      const introVideo = document.getElementById('intro-video');
+      const introContainer = document.getElementById('intro-video-container');
+      const skipBtn = document.getElementById('skip-intro');
 
-</body>
+      introVideo.onended = () => {
+        introContainer.style.display = 'none';
+      };
+
+      skipBtn.onclick = () => {
+        introVideo.pause();
+        introContainer.style.display = 'none';
+      };
+    </script>
+  </body>
 </html>

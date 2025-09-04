@@ -1,8 +1,34 @@
-:root { --brand:#0a3d62; --ink:#111; --bg:#fff; --muted:#6b7280; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
-a { color: var(--brand); text-decoration: none; }
-.container { max-width: 900px; margin: 0 auto; padding: 1.25rem; }
+:root {
+  --brand: #0a3d62;
+  --ink: #111;
+  --bg: #fff;
+  --muted: #6b7280;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
 .site-header {
   background: var(--brand);
   color: #fff;
@@ -33,20 +59,131 @@ a { color: var(--brand); text-decoration: none; }
   margin-right: 8px;
 }
 
-.brand { font-weight: 700; font-size: 1.1rem; letter-spacing: .2px; }
-nav a { margin-left: 1rem; opacity:.95; }
-nav a:hover { text-decoration: underline; }
-h1, h2, h3 { color: var(--brand); line-height:1.25; }
-.hero { text-align:center; padding: 3rem 1.25rem; background: #f3f4f6; border-radius: 1rem; margin-top: 1rem; }
-.hero h1 { margin-top: 0; font-size: clamp(1.8rem, 3vw, 2.4rem); }
-.grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.card { border: 1px solid #e5e7eb; border-radius: 1rem; padding: 1rem; background:#fff; }
-.site-footer { border-top:1px solid #e5e7eb; margin-top:2rem; }
-.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; }
-.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-.callout { padding:1rem; border-left:4px solid var(--brand); background:#eef6fb; border-radius:.5rem; }
-ul.checks { list-style: none; padding-left: 0; }
-ul.checks li::before { content: "✔ "; color: var(--brand); }
-form input, form textarea { width: 100%; padding: .75rem; border:1px solid #e5e7eb; border-radius:.5rem; }
-form button { padding:.75rem 1rem; border:0; background:var(--brand); color:#fff; border-radius:.5rem; cursor:pointer; }
-form button:hover { filter: brightness(0.95); }
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+}
+nav a {
+  margin-left: 1rem;
+  opacity: 0.95;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+h1,
+h2,
+h3 {
+  color: var(--brand);
+  line-height: 1.25;
+}
+.hero {
+  text-align: center;
+  padding: 3rem 1.25rem;
+  background: #f3f4f6;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+.hero h1 {
+  margin-top: 0;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #fff;
+}
+.site-footer {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 2rem;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.callout {
+  padding: 1rem;
+  border-left: 4px solid var(--brand);
+  background: #eef6fb;
+  border-radius: 0.5rem;
+}
+ul.checks {
+  list-style: none;
+  padding-left: 0;
+}
+ul.checks li::before {
+  content: '✔ ';
+  color: var(--brand);
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+}
+form button {
+  padding: 0.75rem 1rem;
+  border: 0;
+  background: var(--brand);
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+form button:hover {
+  filter: brightness(0.95);
+}
+#intro-video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#intro-video {
+  width: 50%; /* half screen width */
+  height: auto; /* auto height to keep aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#skip-intro {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+#skip-intro:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
